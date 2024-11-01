@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maximilian Granjon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Column - Static Text and Images -->
+    <div class="column left">
+      <h2 class="all-column-title" id="leftColumnTitle" onclick="scrollToTopLeft()">Maximilian Granjon <br>Student</h2>
+      <div class="fixed-text">
+        <p>Luisenstr. 93<br>76137 Karlsruhe<br>email:<br>maximiliangrj@gmail.com</p>
+      </div>
+      <p>Architect, Researcher, Educator</p>
+      <p>Contact Information: Atelier 6, 8002 Zurich</p>
+      <p>Friends: [List of Names]</p>
+      <p>Design: Silvia Balzan</p>
+      <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor accumsan vestibulum vulputate velit, molestie aliquet non. Leo mauris amet lacinia orci tellus class curabitur tortor. Pretium ultricies ridiculus etiam volutpat luctus erat facilisis massa. Ornare ipsum justo venenatis venenatis ullamcorper nec aptent mauris. Etiam efficitur etiam pharetra dignissim platea et. Suscipit ornare ex dolor, taciti litora litora at donec.
+        Nisl velit sapien porta duis pulvinar sem. Aenean ac ultricies fusce duis; mi commodo. Class rutrum cubilia ullamcorper, justo luctus quisque. Efficitur vel nibh eu lacinia augue. Placerat proin risus proin nulla scelerisque. Ad fermentum sapien eu tempus vestibulum litora. Inceptos parturient tellus sit ridiculus ultricies fames molestie ligula lacinia. Semper nulla ipsum hac lacinia etiam suspendisse integer. Nascetur blandit vivamus elementum; conubia aliquet lobortis ipsum. Parturient parturient consequat fusce at mattis pellentesque.
+        Habitant purus tortor senectus auctor himenaeos. Eget pretium tempor tempor metus mattis pulvinar mattis. Ipsum euismod sed quis, sagittis efficitur est finibus. Fames venenatis ipsum rutrum quisque maximus aliquet venenatis gravida facilisis. Hendrerit aliquet dignissim condimentum gravida maecenas conubia suscipit. Mauris consectetur a hac per dignissim porttitor. Sed lobortis fermentum ridiculus senectus consectetur class enim mollis. Fames fames cras tristique duis sagittis commodo laoreet. Aptent vitae fusce luctus aenean vehicula magnis etiam eget.
+        </p>
+    </div>
+
+    <!-- Middle Column - List of Projects -->
+    <div class="column middle">
+      <h2 class="all-column-title" onclick="resetProjectDetails()" onclick="scrollToTop('.middle')">Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3 onclick="showProject('project1')">GRID</h3>
+          <img src="/Users/granj/Downloads/_MG_8496.jpg" alt="Thumbnail 1" onclick="showProject('project1')">
+          <br>
+          <span class="read-more" onclick="showProject('project1')">Read More</span>
+        </div>
+        <div class="project">
+          <h3 onclick="showProject('project2')">Hofhaus</h3>
+          <img src="/Users/granj/Downloads/_MG_8499.jpg" alt="Thumbnail 2" onclick="showProject('project2')">
+          <br>
+          <span class="read-more" onclick="showProject('project2')">Read More</span>
+        </div>
+        <div class="project">
+          <h3 onclick="showProject('project3')">Alltagshaus</h3>
+          <p onclick="showProject('project3')">This is a short description of the project. It is very short. Not very long. Just short.</p>
+          <img src="/Users/granj/Downloads/_MG_8501.jpg" alt="Thumbnail 3" onclick="showProject('project3')">
+          <br>
+          <span class="read-more" onclick="showProject('project3')">Read More</span>
+        </div>
+        <div class="project">
+          <h3 onclick="showProject('project4')">Vertical Porosity</h3>
+          <img src="/Users/granj/Downloads/_MG_8501.jpg" alt="Thumbnail 3" onclick="showProject('project4')">
+          <br>
+          <span class="read-more" onclick="showProject('project4')">Read More</span>
+        </div>
+        <div class="project">
+          <h3 onclick="showProject('project5')">Climate Change Center</h3>
+          <img src="/Users/granj/Downloads/_MG_8501.jpg" alt="Thumbnail 3" onclick="showProject('project5')">
+          <br>
+          <span class="read-more" onclick="showProject('project5')">Read More</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column - Project Details -->
+    <div class="column right" id="project-details">
+      <h2 class="all-column-title" onclick="scrollToTopRight()">Details</h2>
+      <div id="details-content">
+        <p>Select a project to view details.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Image Popup -->
+  <div id="image-modal" class="modal" onclick="closeModal()">
+    <img id="modal-image" src="" alt="Expanded Image">
+  </div>
+
+  <script src="scripts.js"></script>
+  <!-- Footer -->
+  <footer>
+  <div class="footer-content">
+    <p>Copyright © 2024 Maximilian Granjon</p>
+  </div>
+</footer>
+</body>
+</html>

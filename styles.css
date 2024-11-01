@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Helvetica-Neue, Helvetica;
+    font-weight: 180;
+    display: flex;
+    justify-content: center;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+    cursor: url('/Users/granj/Downloads/crosshair13px.png') 8 8, auto;
+  }
+
+  /* Change cursor color for details images*/
+  img:hover {
+    cursor: url('/Users/granj/Downloads/crosshair12px.png') 8 8, auto;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 0.65fr 0.85fr 1fr;
+    height: 100vh;
+    width: 99%;
+    gap: 0.8%; /* gap between columns */
+    padding-bottom: 20px;
+  }
+  
+  /* Make each column independently scrollable without visible scrollbars */
+  .column {
+    overflow-y: scroll;
+    padding: 0; /* Full width content */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+  .column::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .column.left,
+  .column.middle,
+  .column.right {
+    background-color: #fff; /* White background for each column */
+  }
+  
+  /* Styling for column titles with a top and bottom border */
+  .column h2 {
+  position: sticky;
+  top: 0;
+  background-color: #fff; /* Set background to avoid overlap */
+  padding: 2px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  z-index: 10; /* Ensure it stays on top of other elements */
+  text-align: left;
+  }
+
+  .all-column-title {
+    color: black; /* Original color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .all-column-title:hover {
+    color: #FFA07A; /* Pastel orange color on hover */
+  }
+
+  .fixed-text {
+    position: sticky;
+    top: var(--title-height); /* Adjust this value to position the text under the heading */
+    background-color: #fff; /* Optional: background color to match the container */
+    z-index: 10;
+    border-bottom: 1px solid #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  /* Ensure text in the middle column is aligned to the left */
+  .column.middle {
+    text-align: left;
+  }
+  
+  /* Styling for project list and project details */
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  
+  .project {
+    padding: 2px 0;
+    text-align: left;
+    border-bottom: 1px solid #000; /* Thin black line to separate projects */
+  }
+  
+  .project:last-child {
+    border-bottom: none; /* Remove line after the last project */
+  }
+  
+  .project h3 {
+    margin-bottom: 2px;
+    color: #000;
+    transition: color 0.2s;
+  }
+  
+  .project h3:hover {
+    color: #FFA07A; /* Pastel orange color on hover */
+  }
+  
+  .project img {
+    width: 100%;
+    height: auto;
+    margin-top: 2px;
+    cursor: url('/Users/granj/Downloads/crosshair12px.png') 8 8, auto;
+  }
+  
+  /* Read More link styling */
+  .read-more {
+    display: inline-block;
+    font-size: 0.9em;
+    color: #000;
+    text-decoration: none;
+    margin-top: 2px;
+    transition: color 0.2s;
+  }
+  
+  /* Read More hover effect */
+  .read-more:hover {
+    color: #FFA07A; /* Pastel orange color on hover */
+    text-decoration: none; /* Remove underline on hover */
+  }
+  
+  /* Content area for the right column */
+  #details-content {
+    margin-top: 0px;
+  }
+
+  /* Existing styles... */
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* On top of all other elements */
+  }
+  
+  .modal img {
+    width: 85%; /* 95% of viewport width */
+    max-width: 85%;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  /* Footer styling */
+footer {
+    font-family: Helvetica;
+    font-size: 0.825em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 5px 0px;
+    padding-right: 5px;
+    z-index: 100; /* Ensure footer stays above other content */
+  }
+  
+  .footer-content {
+    max-width: 100%; /* Limits footer content width */
+    margin: 0 auto; /* Centers the footer content */
+    text-align: right;
+    color: #000; /* Black text color */
+  }
+  
+  /* Set custom selection color */
+.container ::selection {
+  background-color: lightgrey; /* Light grey background for selected text */
+  color: black; /* Optional: Set selected text color */
+}
+
+  
